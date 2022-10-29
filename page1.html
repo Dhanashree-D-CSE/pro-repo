@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+             .form {
+                align-items:center;
+                background-color: #15172b;
+                border-radius: 20px;
+                box-sizing: border-box;
+                height: 300px;
+                padding: 20px;
+                width: 320px;
+                color:#fff;
+                margin: 60px 10px 50px 450px;
+                }
+           
+            
+         </style>
+    </head>
+<style>
+ .btn-submit{
+  background-color: green;
+  border: none;
+  border-radius:12px;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <body>
+        <body background="D:\project\R.jpg">
+        <h2 align="center">Find out which crop is suitable for your field</h2>
+<h3 align="right">
+   <font face="cinzel">
+         <a href="index">Home</a>&nbsp;&nbsp;&nbsp;
+         
+   </font>
+</h3>
+   <h3 align="center">Enter the following details:</h3>
+        <form  class ="form" name="passdata" action="{{ url_for('get_value')}}" method="post" >
+            <label for="nit">Nitrogen</label><br>
+            <input type="text" id="nit" name="nitro">
+            <br><br>
+            <label for="Phosphorous">phosphorous</label><br>
+            <input type="text" id="phos" name="phos">
+            <br><br>
+            <label for="npk">Pottasium</label><br>
+            <input type="text" id="npk" name="npk">
+            <br><br>
+            <label for="rain">Rainfall</label><br>
+            <input type="text" id="rain" name="rain">
+            <br><br>
+            
+            <input type="submit" value="submit">
+
+
+        </form>
+   
+    </body>
+</html>

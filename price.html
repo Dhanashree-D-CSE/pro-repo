@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+             .form {
+                background-color: #15172b;
+                border-radius: 20px;
+                box-sizing: border-box;
+                height: 350px;
+                padding: 30px;
+                width: 320px;
+                color:#fff;
+                margin: 60px 10px 50px 450px;
+                }
+           
+            
+         </style>
+    </head>
+<style>
+ .btn-submit{
+  background-color: green;
+  border: none;
+  border-radius:12px;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <body>
+        <body background="D:\project\R.jpg">
+        <h2 align="center">Find out which crop is suitable for your field</h2>
+<h3 align="right">
+   <font face="cinzel">
+         <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+         
+   </font>
+</h3>
+   <h3 align="center">Enter the following details:</h3>
+        <form  class ="form" name="passdata" action="{{ url_for('select_value')}}" method="post" >
+            <label for="veges">Choose a vegetable:</label>
+            <br>
+            <select name="veges" id="veges">
+            <option value="Avarai (1 Kg) :">cluster beans</option>
+            <option value="Amla (1 Kg) :">amla</option>
+            <option value="Baby corn (1 Kg) :">Baby corn</option>
+            <option value="Beans (1 Kg) :">Beans</option>
+            <option value="Beetroot (1 Kg) :">Beetroot</option>
+            <option value="Bittergourd (1 Kg) :">Bittergourd</option>
+            <option value="Brinjal (1 Kg) :">Brinjal</option>
+            <option value="Butter Beans (1 Kg) :">Butter Beans</option>
+            <option value="Cabbage (1 Kg) :">Cabbage</option>
+            <option value="Carrot (1 Kg) :">Carrot</option>
+            <option value="Cauliflower (1 Piece) :">Cauliflower</option>
+            <option value="Coconut (Small) :">Coconut</option>
+            <option value="Cucumber (1 Kg) :">Cucumber</option>
+            <option value="Double Beans (1 Kg) :">Double Beans</option>
+            <option value="Drumstick (1 Kg) :">Drumstick</option>
+            <option value="Garlic - Big (Hills) (1 Kg) :">Garlic</option>
+            <option value="Ginger (1 Kg) :">Ginger</option>
+            <option value="Green Peas (1 Kg) :">Green Peas</option>
+            <option value="Green Chilli (1 Kg) :">Green Chilli</option>
+            <option value="Ladies Fingers (1 Kg) :">Ladies Fingers</option>
+            <option value="Mango - Raw (1 Kg) :">Mango</option>
+            <option value="Onion - Big (1 Kg) :">Onion - Big</option>
+            <option value="Onion - Small (1 Kg) :">Onion - Small</option>
+            <option value="Potato (1 Kg) :">Potato</option>
+            <option value="Radish (1 Kg) :">Radish</option>
+            <option value="Tomato - Bangalore (1 Kg) :">Tomato</option>
+            </select>
+            
+            <input type="submit" value="submit">
+            <br>
+            <label for="veg-price">price</label><br>
+            <input type="text" id="veg-price" name="veg-price" placeholder={{veg}}>
+            
+            <br><br>
+            <label for="dals">Choose a cereal:</label>
+            <br>
+            <select name="dals" id="dals">
+            <option value="Chenna Black ( 1kg ) :">Chenna Black</option>
+            <option value="Chenna White Big  ( 1kg ):">Chenna White Big</option>
+            <option value="Chenna White small (1 Kg) :">Chenna White small</option>
+            <option value="Kadalai Paruppu - Dhal - Gram (1 Kg) :">Gram</option>
+            <option value="Pasi paruppu - Dhal - Moong(1 Kg) :">Moong Dhal</option>
+            <option value="Ulutham paruppu - Dhal - Orid (1 Kg) :">Orid Dhal</option>
+            <option value="Thuvaram paruppu - Dhal - Toor (1 Kg) :">Toor Dhal</option>
+            <option value="Green Moong Dhal (1 Kg) :">Green Moong Dhal</option>
+            <option value="Rajma - Black (1 Kg) :">Rajma - Black</option>
+            <option value="Rajma - Pink(1 Kg) :">Rajma - Pink(</option>
+            <option value="Rice - Basmathi (1 Kg) :">Rice - Basmathi</option>
+            <option value="Rice - Boiled (1 Kg) :">Rice - Boiled</option>
+            <option value="Rice - Idly (1 Kg) :">Rice - Idly</option>
+            <option value="Rice - India Gate Basmathi (1 Kg) :">Rice - India Gate Basmathi</option>
+            <option value="Rice - Karnataka Ponni (1 Kg) :">Rice - Karnataka Ponni</option>
+            <option value="Roasted Gram (1 kg) :">Roasted Gram</option>
+
+            </select>
+            
+            <input type="submit" value="submit">
+            <br>
+            <label for="dal-price">price</label><br>
+            <input type="text" id="dal-price" name="dal-price" placeholder= {{dal}}>
+            
+            <br><br>
+            <label for="spices">Choose spice:</label>
+            <br>
+            <select name="spices" id="spices">
+            <option value="Cardamom (Elakkai) (1 Kg) :">Cardamom</option>
+            <option value="Cinnamon (Pattai) (1 Kg) :">Cinnamon</option>
+            <option value="Clove (Elavanga Poo) (1 Kg) :">Clove</option>
+            <option value="Coriander (Kothamalli) (1 Kg) :">Coriander</option>
+            <option value="Fennel (Sombu) (1 Kg) :">Fennel</option>
+            <option value="Fenugreek (Venthayam) (1 Kg) :">Fenugreek</option>
+            <option value="Mustard (Kadugu) (1 Kg) :">Mustard</option>
+            <option value="Pepper (Milagu) (1 Kg) :">Pepper</option>
+            <option value="Tamarind (Puli) (1 Kg) :">Tamarind</option>
+            <option value="Turmeric (Manjal) (1 Kg) :">Turmeric</option>
+            <option value="Areca Nut (Pakku) (1 Kg) :">Areca Nut</option>
+            <option value="Cashew Nut (Munthiri) (1 Kg) :">Cashew Nut</option>
+            <option value="Ground Nut  (1 Kg) :">Ground Nut</option>
+            
+            </select>
+            
+            <input type="submit" value="submit">
+            <br>
+            <label for="spice-price">price</label><br>
+            <input type="text" id="spice-price" name="spice-price" placeholder={{spice}}>
+            <br>
+            
+
+
+        </form>
+   
+    </body>
+</html>
